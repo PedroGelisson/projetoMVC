@@ -1,5 +1,5 @@
 const Tarefa = require('../models/tarefaModel.js');
-const DB = require("..models/dbModel.js");
+const DB = require("../models/dbModel.js");
 
 async function getTarefas(req, res) { 
     const tarefas = await DB.findAll("tarefas");
@@ -9,7 +9,7 @@ async function getTarefas(req, res) {
 async function addTarefa(req, res) { 
 const { title ,description} = req.body; 
 const tarefa = new Tarefa(new Date().toLocaleString("pt-BR"), title,description); 
-await DB.insertOne("tarefas",tarefa)
+await DB.insertOne("tarefas", tarefa)
 res.redirect('/'); 
 } 
 

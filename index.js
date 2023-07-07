@@ -1,5 +1,6 @@
 const express = require('express'); 
-const tarefaController = require('./controllers/tarefaController'); 
+const tarefaController = require('./controllers/tarefaController.js'); 
+
 const app = express(); 
 const port = 3000; 
 
